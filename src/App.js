@@ -9,18 +9,17 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-        value: ''
+        value: []
     }
 }
 
 componentDidMount() {
     //this.props.fetchCustomers();
-    fetch('https://dnddev.herokuapp.com')
-    .then(res => res.json())
-    .then((data) => {
-     console.log(data)
+    fetch('https://dnddev.herokuapp.com').then(results => {
+      return results.json();
+    }).then(data => {
+      console.log(data);
     })
-    .catch(console.log)
 }
 
 onHandle = (e) => {
