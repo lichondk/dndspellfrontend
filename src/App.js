@@ -15,7 +15,7 @@ class App extends Component {
 
 componentDidMount() {
     //this.props.fetchCustomers();
-    fetch('https://dnddev.herokuapp.com').then(results => {
+    fetch('https://dnddev.herokuapp.com/spells').then(results => {
       console.log(results)
       return results.json();
     }).then(data => {
